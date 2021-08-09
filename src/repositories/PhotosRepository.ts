@@ -1,9 +1,9 @@
 import { Photo } from '../models/Photo';
 
 class PhotosRepository {
-    constructor() {}
+    constructor() { }
     createPhoto(props: any) {
-        return Photo.create(props);
+        return Photo.created(props)
     }
 }
 

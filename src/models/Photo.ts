@@ -1,6 +1,6 @@
 import { Model } from 'sequelize';
 
-export class Photo extends Model {
+export class Photo {
     public id!: number;
     public date!: string;
     public hour!: string;
@@ -8,4 +8,10 @@ export class Photo extends Model {
     public base64!: string;
     public status!: boolean;
     public statusMsg!: string;
+
+    public static created(obj: object) {
+        return new Promise<object>((resolve, reject) => {
+            return resolve(obj)
+        })
+    }
 }
